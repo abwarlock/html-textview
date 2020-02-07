@@ -187,7 +187,7 @@ public class HtmlTagHandler implements WrapperTagHandler {
                 start(output, new Code());
             } else if (tag.equalsIgnoreCase("center")) {
                 start(output, new Center());
-            } else if (tag.equalsIgnoreCase("s") || tag.equalsIgnoreCase("strike")) {
+            } else if (tag.equalsIgnoreCase("del") || tag.equalsIgnoreCase("s") || tag.equalsIgnoreCase("strike")) {
                 start(output, new Strike());
             } else if (tag.equalsIgnoreCase("table")) {
                 start(output, new Table());
@@ -279,7 +279,7 @@ public class HtmlTagHandler implements WrapperTagHandler {
                 end(output, Code.class, false, new TypefaceSpan("monospace"));
             } else if (tag.equalsIgnoreCase("center")) {
                 end(output, Center.class, true, new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER));
-            } else if (tag.equalsIgnoreCase("s") || tag.equalsIgnoreCase("strike")) {
+            } else if (tag.equalsIgnoreCase("del") || tag.equalsIgnoreCase("s") || tag.equalsIgnoreCase("strike")) {
                 end(output, Strike.class, false, new StrikethroughSpan());
             } else if (tag.equalsIgnoreCase("table")) {
                 tableTagLevel--;
